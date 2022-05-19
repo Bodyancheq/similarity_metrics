@@ -41,6 +41,10 @@ list_news_text = list(re_pattern.findall(news_text))
 
 
 def jaccard_index(text: list, keywords: set):
+    """
+    Jaccard's index. It is calculated between two sets with formula:
+    (A intersect B) / (A union B)
+    """
     text_keywords = set(text)
     intersection = len(text_keywords.intersection(keywords))
     union = len(text_keywords.union(keywords))
